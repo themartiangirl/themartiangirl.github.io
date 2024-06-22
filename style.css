@@ -2,16 +2,16 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #fff;
-    background-color: #000;
+    color: #ffffff;
+    background-color: #000000;
 }
 
 header {
-    background-color: #000;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     padding: 15px 0;
     text-align: center;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #ffffff;
 }
 
 .logo {
@@ -22,8 +22,11 @@ header {
 }
 
 .epsilon-symbol {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    padding: 10px;
 }
 
 nav ul {
@@ -40,6 +43,7 @@ nav ul li {
 nav ul li a {
     color: #fff;
     text-decoration: none;
+    font-weight: bold;
 }
 
 main {
@@ -51,25 +55,38 @@ section {
     margin: 40px 0;
 }
 
+h1, h2 {
+    font-weight: normal;
+    border-bottom: 1px solid #ffffff;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.5;
+}
+
 button {
-    background-color: #fff;
-    color: #000;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ffffff;
     padding: 10px 20px;
-    border: none;
     cursor: pointer;
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #555;
-    color: #fff;
+    background-color: #ffffff;
+    color: #000000;
 }
 
 footer {
-    background-color: #000;
-    color: #fff;
+    background-color: #000000;
+    color: #ffffff;
     text-align: center;
     padding: 10px 0;
-    border-top: 1px solid #fff;
+    border-top: 1px solid #ffffff;
     position: fixed;
     width: 100%;
     bottom: 0;
