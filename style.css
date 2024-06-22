@@ -84,11 +84,22 @@ button:hover {
     color: #000000;
 }
 
-footer {
+/* footer {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
     padding:5px;
     width: 100%;
     bottom: 0;
-}
+} */
+
+content{
+      min-height: calc(100vh - 100px) /* you have to minus header and footer width 
+      together*/
+    }
+    .footer {
+      margin-top: 0; /* take available whitespace */
+      margin-bottom: -10px;      /* remove bottom whitespace */
+      padding-bottom: 5px;
+      height: 100px;            /* calc height when limited content */
+      }
