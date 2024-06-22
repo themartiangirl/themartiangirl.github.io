@@ -1,169 +1,62 @@
 <!DOCTYPE html>
-<html>
-<title>The Martian Girl</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Martian Girl</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+<!--                 <li><a href="#welcome">Welcome</a></li> -->
+<!--                 <li><a href="#features">Features</a></li> -->
+                <li><a href="#painting">Painting</a></li> 
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="welcome">
+            <h1>Welcome to my cyberspace</h1>
+            <p>The Martian Girl ε - small but positive quantity :) </p>
+            <button>Continue</button>
+        </section>
 
-<style>
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.sidebar {width: 120px;background: #222;}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
+      
+      <!--
+        <section id="features">
+            <h2>Features</h2>
+            <div class="feature">
+                <h3>Feature 1</h3>
+                <p>Description of feature 1.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 2</h3>
+                <p>Description of feature 2.</p>
+            </div>
+            <div class="feature">
+                <h3>Feature 3</h3>
+                <p>Description of feature 3.</p>
+            </div>
+        </section>
+      -->
 
-</style>
-
-
-<body class="black">
-
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
-<nav class="sidebar bar-block small hide-small center">
-  <!-- Avatar image in top left corner -->
-  <!-- Not sure yet 
-  <img src="Artworks/icon.png" style="width: 100%;">
-  -->
-  <a href="#" class="bar-item button padding-large black">
-    <i class="fa fa-home xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="bar-item button padding-large hover-black">
-    <i class="fa fa-user xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#works" class="bar-item button padding-large hover-black">
-    <i class="fa fa-linode xxlarge"></i>
-    <p>WORKS</p>
-  </a>
-  <a href="#contact" class="bar-item button padding-large hover-black">
-    <i class="fa fa-envelope xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-</nav>
-
-
- 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
-
-<div class="top hide-large hide-medium" id="myNavbar">
-  <div class="bar black opacity hover-opacity-off center small">
-    <a href="#" class="bar-item button" style="width:25% !important">HOME</a>
-    <a href="#about" class="bar-item button" style="width:25% !important">ABOUT</a>
-    <a href="#works" class="bar-item button" style="width:25% !important">WORKS</a>
-    <a href="#contact" class="bar-item button" style="width:25% !important">CONTACT</a>
-  </div>
-</div>
-
-
-
-
-<!-- Page Content -->
-<div class="padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="container padding-32 center black" id="home">
-    <h1 class="jumbo"><span class="hide-small">The </span>Martian Girl</h1>
-
-    <h5>CS@Columbia</h5>
-    
-    <!-- <img src="icon.png" alt="main-character" class="image" width="992" height="1108"> -->
-  </header>
-
-  <!-- About Section -->
-  <div class="content justify text-grey padding-64" id="about">
-    <h2 class="text-light-grey">About</h2>
-    <hr style="width:200px" class="opacity">
-    <p> 
-       
-      <h7>Portfolio Showcase</h7>
-
-
-    </p>
-    
-    <!--
-    <button class="button light-grey padding-large section">
-      <i class="fa fa-download"></i> Download Resume
-    </button>
-    -->
-
-  <!-- End About Section -->
-  </div>
-  
-
-  <!-- Portfolio Section -->
-  <div class="padding-64 content" id="works">
-    <h2 class="text-light-grey">Works</h2>
-    <hr style="width:200px" class="opacity">
-
-    <!-- Grid for artworks -->
-    <div class="row-padding" style="margin:0 -16px">
-      <div class="half">
-        <img src="ArtWorks/cello.jpg" style="width:100%">
-        <img src="ArtWorks/abstract2.png" style="width:100%">
-        <img src="ArtWorks/man.jpeg" style="width:100%">
-      </div>
-
-      <div class="half">
-        <img src="ArtWorks/smile-guy.png" style="width:100%">
-        <img src="ArtWorks/abstract1.png" style="width:100%">
-        <img src="ArtWorks/man-with-hat.jpeg" style="width:100%">
-      </div>
-    <!-- End photo grid -->
-    </div>
-  <!-- End Portfolio Section -->
-  </div>
-
-
-
-  <!-- Contact Section -->
-  <div class="padding-64 content text-grey" id="contact">
-    <h2 class="text-light-grey">Contact</h2>
-    <hr style="width:200px" class="opacity">
-
-    <div class="section">
-      <p><i class="fa fa-map-marker fa-fw text-white xxlarge margin-right"></i> New York, US</p>
-      <p><i class="fa fa-envelope fa-fw text-white xxlarge margin-right"> </i> Email: oatlattegirl@mail.com</p>
-    </div><br>
-    <p>Let's get in touch. Send me a message</p>
-
-    <!--
-    <form action="/action_page.php" target="_blank">
-      <p><input class="input padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="input padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="input padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="input padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="button light-grey padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-    -->
-
-  <!-- End Contact Section -->
-  </div>
-  
-
-    <!-- Footer -->
-  <footer class="content padding-64 text-grey xlarge">
-    <!--
-    <i class="fa fa-facebook-official hover-opacity"></i>
-    <i class="fa fa-instagram hover-opacity"></i>
-    <i class="fa fa-snapchat hover-opacity"></i>
-    <i class="fa fa-pinterest-p hover-opacity"></i>
-    
-    <i class="fa fa-twitter hover-opacity"></i>
-    <i class="fa fa-linkedin hover-opacity"></i>
-    -->
-    <p class="medium">Powered by <a href="https://themartiangirl.github.io/" target="_blank" class="hover-text-green">The Martian Girl</a></p>
-  <!-- End footer -->
-  </footer>
-
-
-<!-- END PAGE CONTENT -->
-</div>
-
+      
+        <section id="painting">
+            <h2>Painting</h2>
+            <p>I paint, sometimes lol</p>
+        </section>
+      
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Have questions? <a href="consonantresearch@gmail.com">Happy to chat :)</a>.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Consonant Research. All rights reserved.</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
