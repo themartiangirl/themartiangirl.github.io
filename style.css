@@ -58,13 +58,11 @@ main {
 }
 
 section {
-    margin: 10px 50px 20px;;
+    margin: 0;
 }
 
 h1, h2 {
     font-weight: normal;
-    border-bottom: 1px solid #ffffff;
-    display: inline-block;
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
@@ -91,9 +89,6 @@ footer {
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    padding: 10px 0;
-    border-top: 1px solid #ffffff;
-    position: fixed;
     width: 100%;
     bottom: 0;
 }
