@@ -9,6 +9,7 @@ function loadContent(page) {
             content.innerHTML = `
                 <section id="projects">
                     <h2>Fun Projects</h2>
+                    <p> hahahahahha testing </p>
                     <button onclick="loadContent('home')">Back to Home</button>
                 </section>
             `;
