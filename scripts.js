@@ -35,7 +35,7 @@ function loadContent(page) {
                     <p>Love to empower human connection through technology and talk to LLMs ;) </p>
                     <button onclick="loadContent('projects')">Fun Projects</button>
                     <button onclick="loadContent('painting')">I paint, sometimes lol</button>
-                    <a href="mailto:consonantresearch@gmail.com" class="button">Happy to chat :)</a>
+                    <a href="mailto:consonantresearch@gmail.com" class="button">Happy to chat!</a>
                 </section>
             `;
     }
