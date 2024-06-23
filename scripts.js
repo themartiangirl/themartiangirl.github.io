@@ -33,6 +33,8 @@ function loadContent(page) {
                 </section>
             `;
             break;
+
+        <!--    
         case 'contact':
             content.innerHTML = `
                 <section id="contact">
@@ -40,6 +42,9 @@ function loadContent(page) {
                     <button onclick="loadContent('home')">Back to Home</button>
                 </section>
             `;
+        -->
+
+            
             break;
         default:
             content.innerHTML = `
