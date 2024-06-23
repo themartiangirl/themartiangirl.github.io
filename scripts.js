@@ -27,6 +27,14 @@ function loadContent(page) {
                 </section>
             `;
             break;
+        case 'contact':
+            content.innerHTML = `
+                <section id="contact">
+                    <a href="mailto:consonantresearch@gmail.com"></a>
+                    <button onclick="loadContent('home')">Back to Home</button>
+                </section>
+            `;
+            break;
         default:
             content.innerHTML = `
                 <img src="ArtWorks/epsilon.png" alt="epsilon.png">
