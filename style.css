@@ -114,3 +114,18 @@ content{
       padding-bottom: 5px;
       height: 100px;            /* calc height when limited content */
       }
+
+
+#menutop {
+    text-align: left;
+    }
+    
+#menutop ul {
+    list-style: none;
+    }
+    
+#menutop li {
+    display: inline;
+    padding: 10px;
+    font-size:8px;
+    }
