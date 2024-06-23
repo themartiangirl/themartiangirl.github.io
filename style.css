@@ -116,16 +116,3 @@ content{
       }
 
 
-#menutop {
-    text-align: left;
-    }
-    
-#menutop ul {
-    list-style: none;
-    }
-    
-#menutop li {
-    display: inline;
-    padding: 10px;
-    font-size:8px;
-    }
