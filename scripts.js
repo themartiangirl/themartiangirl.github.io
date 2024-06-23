@@ -9,12 +9,13 @@ function loadContent(page) {
             content.innerHTML = `
                 <section id="projects">
                     <h2>Fun Projects</h2>
-                    <button>Image Caption RNN Generator:</button>
-                    <button>Neural Network Dependency Parser</button>
-                    <button>Financials Visualizer</button>
-                    <button>Lexical Substitution</button>
+                    ul>
+                      <li>Image Caption RNN Generator</li>
+                      <li>Neural Network Dependency Parser</li>
+                      <li>Financials Visualizer</li>
+                      <li>Lexical Substitution</li>
+                    </ul>
 
-                    
                     <button onclick="loadContent('home')">Back to Home</button>
                 </section>
             `;
