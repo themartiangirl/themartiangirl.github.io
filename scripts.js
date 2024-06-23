@@ -8,15 +8,11 @@ function loadContent(page) {
         case 'projects':
             content.innerHTML = `
                 <section id="projects">
-                    <h2>Fun Projects</h2>
-                    <div id="menutop">
-                        <ul>
-                          <li>Image Caption RNN Generator</li>
-                          <li>Neural Network Dependency Parser</li>
-                          <li>Financials Visualizer</li>
-                          <li>Lexical Substitution</li>
-                        </ul>
-                    </div>
+                    <h1>Fun Projects</h1>
+                      <h2>Image Caption RNN Generator</h2>
+                      <h2>Neural Network Dependency Parser</h2>
+                      <h2>Financials Visualizer</h2>
+                      <h2>Lexical Substitution</h2>
 
                     <button onclick="loadContent('home')">Back to Home</button>
                 </section>
