@@ -17,7 +17,12 @@ function loadContent(page) {
             content.innerHTML = `
                 <section id="painting">
                     <h2>Paintings</h2>
-                    <p>I paint, sometimes lol</p>
+                    <img src="ArtWorks/cello.jpg" alt="cello" />
+                    <img src="ArtWorks/abstract1.png" alt="abstrat1" />
+                    <img src="ArtWorks/smile-guy.png" alt="smileguy" />
+                    <img src="ArtWorks/abstract2.png" alt="abstract2" />
+                    <img src="ArtWorks/man-with-hat.jpeg" alt="manwithhat"/>
+                   
                     <button onclick="loadContent('home')">Back to Home</button>
                 </section>
             `;
