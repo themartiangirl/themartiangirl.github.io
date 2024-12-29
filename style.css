@@ -1,118 +1,61 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 10px 50px 20px;;
+    margin: 0;
     padding: 0;
-    color: #ffffff;
-    background-color: #000000;
-}
-
-header {
-    background-color: #000000;
-    color: #ffffff;
-    padding: 15px 0;
-    text-align: center;
-    border-bottom: 1px solid #ffffff;
-}
-
-.logo {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.epsilon-symbol {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    padding: 10px;
-}
-
-img {
-  width: 300px;
-  height: auto;
-}
-
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
+    justify-content: center;
+    height: 100vh;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  #controls {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0;
+  }
+  
+  input[type="range"] {
+    width: 200px;
+  }
+  
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .nav-link {
     text-decoration: none;
+    color: #333;
+    font-size: 20px;
     font-weight: bold;
-}
-
-main {
-    padding: 20px;
-    text-align: center;
-}
-
-section {
-    margin: 0;
-}
-
-h1, h2 {
-    font-weight: normal;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-p {
-    line-height: 1.5;
-}
-
-button {
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
-}
-
-.button {
-    background-color: #000000;
-    color: #ffffff;
-    border: 2px solid #ffffff;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
-}
-
-button:hover {
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* footer {
-    background-color: #000000;
-    color: #ffffff;
-    text-align: center;
-    padding:5px;
-    width: 100%;
-    bottom: 0;
-} */
-
-content{
-      min-height: calc(100vh - 100px) /* you have to minus header and footer width 
-      together*/
-    }
-    .footer {
-      margin-top: 0; /* take available whitespace */
-      margin-bottom: -10px;      /* remove bottom whitespace */
-      padding-bottom: 5px;
-      height: 100px;            /* calc height when limited content */
-      }
-
-
+    margin: 10px 0;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    color: #e74c3c;
+  }
+  
+  .line {
+    width: 300px;
+    height: 2px;
+    background-color: #333;
+    margin: 5px 0;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .nav-link:hover + .line, .line:hover {
+    background-color: #e74c3c;
+    transform: scaleX(1.2);
+  }
+  

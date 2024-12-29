@@ -1,60 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
-    console.log('Website loaded');
+const lines = document.querySelectorAll(".line");
+const animateButton = document.getElementById("animate");
+
+let minFrequency = 1200;
+let deltaFrequency = 1500;
+let detune = 0;
+let stagger = 0.05;
+let outDuration = 0.25;
+
+animateButton.addEventListener("click", () => {
+  // Update values from controls
+  minFrequency = document.getElementById("min-frequency").value;
+  deltaFrequency = document.getElementById("delta-frequency").value;
+  detune = document.getElementById("detune").value;
+  stagger = document.getElementById("stagger").value;
+  outDuration = document.getElementById("out-duration").value;
+
+  // Apply animation to each line
+  lines.forEach((line, index) => {
+    setTimeout(() => {
+      line.style.transform = `translateY(${Math.sin(index + parseFloat(detune)) * deltaFrequency}px)`;
+      line.style.transition = `transform ${outDuration}s ease`;
+    }, index * stagger * 1000);
+  });
 });
-
-function loadContent(page) {
-    const content = document.getElementById('content');
-    switch(page) {
-        case 'projects':
-            content.innerHTML = `
-                <section id="projects">
-                    <h1>Fun Projects</h1>
-                      <h2>Image Caption RNN Generator</h2>
-                      <h2>Neural Network Dependency Parser</h2>
-                      <h2>Financials Visualizer</h2>
-                      <h2>Lexical Substitution</h2>
-
-                    <button onclick="loadContent('home')">Back to Home</button>
-                </section>
-            `;
-            break;
-        case 'painting':
-            content.innerHTML = `
-                <section id="painting">
-                    <h2>Paintings</h2>
-                    <img src="ArtWorks/cello.jpg" alt="cello">
-                    <img src="ArtWorks/man-with-hat.jpeg" alt="manwithhat"/>
-                    <img src="ArtWorks/smile-guy.png" alt="smileguy">
-                    <img src="ArtWorks/abstract2.png" alt="abstract2">
-                   
-                    <button onclick="loadContent('home')">Back to Home</button>
-                </section>
-            `;
-            break;
-
-        <!--    
-        case 'contact':
-            content.innerHTML = `
-                <section id="contact">
-                    <a href="mailto:consonantresearch@gmail.com"></a>
-                    <button onclick="loadContent('home')">Back to Home</button>
-                </section>
-            `;
-        -->
-
-            
-            break;
-        default:
-            content.innerHTML = `
-                <img src="ArtWorks/epsilon.png" alt="epsilon.png">
-                <section id="welcome">
-                    <h1>Cyberspace of the Martian Girl - A Small but Positive Quantity :)</h1>
-                    <p>Columbia grad with background in Computer Science and Math primarily in ML/AI, bits in finance</p>
-                    <p>Love to empower human connection through technology and talk to LLMs ;) </p>
-                    <button onclick="loadContent('projects')">Fun Projects</button>
-                    <button onclick="loadContent('painting')">I paint, sometimes lol</button>
-                    <a href="mailto:consonantresearch@gmail.com" class="button">Happy to chat!</a>
-                </section>
-            `;
-    }
-}
