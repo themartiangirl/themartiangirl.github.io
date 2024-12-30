@@ -1,44 +1,126 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Martian Girl</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div id="controls">
-    <h3>Animation Controls</h3>
-    <label>
-      Min Frequency: <input type="range" id="min-frequency" min="200" max="2000" value="1200">
-    </label>
-    <label>
-      Delta Frequency: <input type="range" id="delta-frequency" min="500" max="3000" value="1500">
-    </label>
-    <label>
-      Detune: <input type="range" id="detune" min="-2000" max="2000" value="0">
-    </label>
-    <label>
-      Stagger: <input type="range" id="stagger" min="0" max="1" step="0.01" value="0.05">
-    </label>
-    <label>
-      Out Duration: <input type="range" id="out-duration" min="0.1" max="5" step="0.1" value="0.25">
-    </label>
-    <button id="animate">Animate!</button>
-  </div>
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>The Martian Girl</title>
+        <meta name="description" content="fun">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
 
-  <nav id="navbar">
-    <div class="line"></div>
-    <a href="#" class="nav-link">Projects</a>
-    <div class="line"></div>
-    <a href="#" class="nav-link">Paintings</a>
-    <div class="line"></div>
-    <a href="#" class="nav-link">Writings</a>
-    <div class="line"></div>
-    <a href="#" class="nav-link">About</a>
-    <div class="line"></div>
-  </nav>
+        <main id="main-view">
+            <nav id="menu-view">
+                <canvas id="menu-canvas"></canvas>
 
-  <script src="script.js"></script>
-</body>
+                <a href="#" class="border-button icon-button close-button"></a>
+
+                <div class="main-menu">
+                    <a href="#/projects" class="projects border-button">projects</a>
+                    <a href="#/lab" class="lab border-button">paintings</a>
+                    <a href="#/writing" class="writing border-button">writing</a>
+                    <a href="#/about" class="about border-button">about</a>
+                </div>
+            </nav>
+
+            <div id="content-container">
+                <!--tbd-->
+            </div>
+
+            <div class="gui-container">
+                <a href="#" class="border-button icon-button settings-button"></a>
+            </div>
+        </main>
+
+        <!--tbd-->
+
+        <script type="text/template" id="projects-view-template">
+            <section class="projects">
+                <div class="article-container">
+                </div>
+                <footer>
+                    <a href="#" class="projects border-button back-button">back</a>
+                </footer>
+            </section>
+        </script>
+        <script type="text/template" id="project-view-template">
+            <div class="image">
+                <img src="<%= image %>">
+            </div>
+            <img src="<%= banner %>" class="banner">
+            <div class="projects border-button icon-button toggle-button"></div>
+            <h1><%= title %></h1>
+            <small><%= type %> | <a target="_blank" href="<%= url %>"><%= urltext %></a></small>
+            <p><%= body %></p>
+        </script>
+
+        <script type="text/template" id="lab-view-template">
+            <section class="lab">
+                <div class="article-container">
+                </div>
+                <footer>
+                    <a href="" class="lab border-button back-button">back</a>
+                    <a href="http://codepen.io/" target="_blank" class="lab border-button center-button">more on codepen</a>
+                </footer>
+            </section>
+        </script>
+        <script type="text/template" id="pen-view-template">
+            <div class="image">
+                <p>loading...</p>
+                <a target="_blank" href="http://codepen.io/full/<%= hash %>">
+                    <img src="<%= image %>">
+                </a>
+                <iframe scrolling='no' frameborder='no' allowfullscreen='true'></iframe>
+            </div>
+            <div class="lab border-button icon-button toggle-button"></div>
+            <h1><%= title %></h1>
+            <small><a target="_blank" href="http://codepen.io/full/<%= hash %>">view full screen</a></small>
+            <p><%= body %></p>
+        </script>
+
+        <script type="text/template" id="writing-view-template">
+            <section class="writing">
+                <div class="article-container">
+                </div>
+                <footer>
+                    <a href="#" class="writing border-button back-button">back</a>
+                </footer>
+            </section>
+        </script>
+        <script type="text/template" id="article-view-template">
+            <div class="image">
+                <img src="<%= image %>">
+            </div>
+            <div class="writing border-button icon-button toggle-button"></div>
+            <h1><%= title %></h1>
+            <small><%= type %></small>
+            <p><%= body %></p>
+        </script>
+
+        <script type="text/template" id="about-view-template">
+            <section class="about">
+                <article class="about item">
+                    <div class="image">
+                        <canvas></canvas>
+                    </div>
+                    <h1></h1>
+                    <p>
+                    </p>
+                </article>
+                <footer>
+                    <a target="_blank" href="mailto:s.consonantresearch@gmail.com" class="about border-button icon-button mail-button"></a>
+                    <a target="_blank" href="http://codepen.io/" class="about border-button icon-button codepen-button"></a>
+                    <a target="_blank" href="https://twitter.com/" class="about border-button icon-button twitter-button"></a>
+                    <a target="_blank" href="https://twitter.com/" class="about border-button icon-button github-button"></a>
+                </footer>
+            </section>
+        </script>
+
+        <!--MAGIC-->
+
+        <script async src="build/final.js"></script>
+    </body>
 </html>

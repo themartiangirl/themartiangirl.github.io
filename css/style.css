@@ -1,0 +1,530 @@
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local("Raleway"),url(../fonts/IczWvq5y_Cwwv_rBjOtT0w.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    src: local("Raleway Medium"),local("Raleway-Medium"),url(../fonts/CcKI4k9un7TZVWzRVT-T8xsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    src: local("Raleway Bold"),local("Raleway-Bold"),url(../fonts/JbtMzqLaYbbbCL9X6EvaIxsxEYwM7FgeyaSgU71cLG0.woff) format("woff");
+    unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000
+}
+
+@media only screen {
+    body {
+        background-color: #f1f1f1;
+        margin: 0;
+        color: #000;
+        font-family: "Raleway",sans-serif;
+        overflow-y: scroll
+    }
+
+    a {
+        color: #000;
+        font-weight: 500;
+        text-decoration: none
+    }
+
+    a:visited {
+        color: #000
+    }
+
+    .disabled {
+        pointer-events: none;
+        cursor: default
+    }
+
+    .loader-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        overflow: hidden
+    }
+
+    .loader-container .loader {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: #000;
+        -moz-animation: bounce-animation 1000ms infinite ease-in-out;
+        -webkit-animation: bounce-animation 1000ms infinite ease-in-out;
+        animation: bounce-animation 1000ms infinite ease-in-out
+    }
+
+    @-moz-keyframes bounce-animation {
+        0% {
+            transform: scale(1, 1)
+        }
+
+        60% {
+            transform: scale(4, 0.25)
+        }
+
+        70% {
+            transform: scale(0.25, 1.25)
+        }
+
+        90% {
+            transform: scale(1, 1)
+        }
+    }
+
+    @-webkit-keyframes bounce-animation {
+        0% {
+            transform: scale(1, 1)
+        }
+
+        60% {
+            transform: scale(4, 0.25)
+        }
+
+        70% {
+            transform: scale(0.25, 1.25)
+        }
+
+        90% {
+            transform: scale(1, 1)
+        }
+    }
+
+    @keyframes bounce-animation {
+        0% {
+            transform: scale(1, 1)
+        }
+
+        60% {
+            transform: scale(4, 0.25)
+        }
+
+        70% {
+            transform: scale(0.25, 1.25)
+        }
+
+        90% {
+            transform: scale(1, 1)
+        }
+    }
+
+    .border-button {
+        cursor: pointer;
+        padding: 8px;
+        text-align: center;
+        background-color: #f1f1f1;
+        outline: 2px solid #000;
+        font-weight: 700;
+        -moz-transition: background-color 0.25s ease-out;
+        -o-transition: background-color 0.25s ease-out;
+        -webkit-transition: background-color 0.25s ease-out;
+        transition: background-color 0.25s ease-out
+    }
+
+    .border-button.icon-button {
+        width: 19px;
+        height: 19px;
+        background-size: contain;
+        background-position: center
+    }
+
+    .border-button.icon-button.close-button {
+        position: absolute;
+        top: 14px;
+        right: 18px;
+        visibility: hidden;
+        background-image: url("../img/close-icon.png")
+    }
+
+    .border-button.icon-button.settings-button {
+        position: absolute;
+        top: 270px;
+        left: 18px;
+        background-image: url("../img/gear-icon.png")
+    }
+
+    .border-button.icon-button.toggle-button {
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        background-image: url("../img/toggle-icon.png")
+    }
+
+    .border-button.icon-button.mail-button {
+        background-image: url("../img/icons/mail.png")
+    }
+
+    .border-button.icon-button.codepen-button {
+        background-image: url("../img/icons/codepen.png")
+    }
+
+    .border-button.icon-button.twitter-button {
+        background-image: url("../img/icons/twitter.png")
+    }
+
+    .border-button.icon-button.github-button {
+        background-image: url("../img/icons/github.png")
+    }
+
+    .border-button.back-button {
+        position: absolute
+    }
+
+    .border-button.center-button {
+        position: relative;
+        display: table;
+        margin: 0 auto
+    }
+
+    #main-view {
+        position: absolute;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        visibility: hidden
+    }
+
+    #main-view #content-container {
+        position: absolute;
+        width: 100%;
+        top: 64px
+    }
+
+    #main-view #menu-view {
+        position: relative;
+        height: 100%;
+        margin: 0 1rem
+    }
+
+    #main-view #menu-view .border-button {
+        position: absolute
+    }
+
+    #main-view #menu-view #menu-canvas {
+        position: absolute;
+        width: 100%;
+        height: 100%
+    }
+
+    section footer {
+        height: 35px;
+        margin: -2px 1rem 1rem;
+        padding-left: 2px
+    }
+
+    section.about footer a {
+        float: left
+    }
+
+    section.about footer a:not(:last-of-type) {
+        margin-right: 43px
+    }
+
+    .item {
+        position: relative;
+        border: 2px solid #000;
+        margin: 0 1rem 2rem;
+        background-color: #f1f1f1;
+        overflow: hidden
+    }
+
+    .item h1 {
+        margin: 0.8rem 1rem 0 1rem
+    }
+
+    .item small {
+        margin: 1rem
+    }
+
+    .item p {
+        margin: 1rem;
+        line-height: 1.35;
+        font-size: 0.95rem
+    }
+
+    .item ul {
+        list-style: none;
+        padding: 0
+    }
+
+    .item .image {
+        position: relative;
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+        border-bottom: 2px solid #000
+    }
+
+    .item .image p {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        line-height: 300px
+    }
+
+    .item .image img {
+        position: absolute;
+        margin: auto;
+        left: -100%;
+        right: -100%
+    }
+
+    .item .banner {
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+
+    .item.projects a {
+        color: #df4020
+    }
+
+    .item.projects .image {
+        border-bottom-color: #df4020
+    }
+
+    .item.lab a {
+        color: #19b380
+    }
+
+    .item.lab .image {
+        height: 350px;
+        border-bottom-color: #19b380
+    }
+
+    .item.lab .image p {
+        line-height: 350px
+    }
+
+    .item.lab .image iframe {
+        position: absolute;
+        box-sizing: border-box;
+        top: 0;
+        width: 100%;
+        height: 350px;
+        display: none
+    }
+
+    .item.writing a {
+        color: #209fdf
+    }
+
+    .item.writing .image {
+        border-bottom-color: #209fdf
+    }
+
+    .item.about {
+        margin-bottom: 43px
+    }
+
+    .item.about a {
+        color: #7f20df
+    }
+
+    .item.about .image {
+        height: 400px;
+        background-color: #f1f1f1;
+        border-bottom-color: #7f20df
+    }
+
+    .item.about .image canvas {
+        position: absolute;
+        width: 100%;
+        height: 400px;
+        left: 0;
+        right: 0;
+        margin: auto
+    }
+
+    .item a {
+        transition: color 0.3s
+    }
+
+    .item a:hover {
+        color: #000
+    }
+
+    .gui-container {
+        display: none
+    }
+}
+
+@media only screen and (min-width: 40.063em) {
+    .border-button.icon-button.close-button {
+        top:30px;
+        right: 18px
+    }
+
+    #main-view {
+        margin: auto;
+        max-width: 800px;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0
+    }
+
+    #main-view #content-container {
+        top: 96px
+    }
+
+    section footer {
+        margin-bottom: 2rem
+    }
+
+    .item {
+        margin-bottom: 3rem
+    }
+
+    .item p {
+        line-height: 1.45;
+        font-size: 1rem
+    }
+}
+
+@media only screen and (min-width: 50.063em) {
+    .border-button:hover {
+        background-color:#7f7f7f
+    }
+
+    .border-button.projects:hover {
+        background-color: #df4020
+    }
+
+    .border-button.lab:hover {
+        background-color: #19b380
+    }
+
+    .border-button.writing:hover {
+        background-color: #209fdf
+    }
+
+    .border-button.about:hover {
+        background-color: #7f20df
+    }
+
+    .border-button.icon-button.close-button {
+        top: 62px
+    }
+
+    #main-view #content-container {
+        top: 160px
+    }
+
+    .item {
+        margin-bottom: 5rem
+    }
+
+    .item p {
+        line-height: 1.55;
+        font-size: 1rem
+    }
+
+    .item.lab .image iframe {
+        display: block
+    }
+
+    .item.lab .image img {
+        display: none
+    }
+
+    .dg.main .close-button {
+        display: none !important
+    }
+
+    .dg {
+        color: #000 !important;
+        font: 12px 'Raleway', sans-serif !important;
+        text-shadow: none !important
+    }
+
+    .dg li:not(.folder) {
+        background: #fafafa !important;
+        border-bottom: 1px solid #d0d0d0 !important
+    }
+
+    .dg li.function span {
+        font-weight: 700 !important;
+        width: 100% !important;
+        text-align: center !important
+    }
+
+    .dg .cr.function {
+        transition: background 0.15s ease-in !important
+    }
+
+    .dg .cr.function:hover {
+        background: #d0d0d0 !important
+    }
+
+    .dg .cr.number input[type=text] {
+        color: #000000 !important;
+        transition: background 0.15s ease-in !important
+    }
+
+    .dg .c input[type=text] {
+        padding: 2px !important;
+        background: #f1f1f1 !important
+    }
+
+    .dg .c input[type=text]:hover {
+        background: #d0d0d0 !important;
+        color: #333 !important
+    }
+
+    .dg .c input[type=text]:focus {
+        background: #f1f1f1 !important;
+        color: #000000 !important
+    }
+
+    .dg .c .slider {
+        background: #f1f1f1 !important;
+        transition: background 0.15s ease-in !important
+    }
+
+    .dg .c .slider-fg {
+        background: #000000 !important;
+        transition: background 0.15s ease-in !important
+    }
+
+    .dg .c .slider:hover {
+        background: #d0d0d0 !important
+    }
+
+    .dg .c .slider:hover .slider-fg {
+        background: #333 !important
+    }
+
+    .gui-container {
+        position: fixed;
+        width: 300px;
+        left: 0;
+        top: -252px;
+        display: block;
+        -moz-transition: top 0.15s ease-in;
+        -o-transition: top 0.15s ease-in;
+        -webkit-transition: top 0.15s ease-in;
+        transition: top 0.15s ease-in
+    }
+
+    .gui-container.gui-container-open {
+        top: 0
+    }
+}
+
+/*# sourceMappingURL=style.css.map */
